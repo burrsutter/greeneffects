@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <title>Tag Cloud 4</title>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src='./tagcloud4/jquery.svg3dtagcloud.js'></script>
+
+    
+
+    <style type='text/css'>
+
+        html, body, div, span, applet, object, iframe,
+        h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+        a, abbr, acronym, address, big, cite, code,
+        del, dfn, em, font, img, ins, kbd, q, s, samp,
+        small, strike, strong, sub, sup, tt, var,
+        b, u, i, center,
+        dl, dt, dd, ol, ul, li,
+        fieldset, form, label, legend,
+        table, caption, tbody, tfoot, thead, tr, th, td {
+            margin: 0;
+            padding: 0;
+            border: 0;
+            outline: 0;
+            font-size: 100%;
+            vertical-align: baseline;
+            background: transparent;
+            box-sizing: border-box;
+        }
+
+        body {
+            overflow: hidden;
+            background-color: #008000;
+        }
+
+    </style>
+
+    <script>
+
+    	$( document ).ready( function() {
+
+            var entries = [ 
+                
+                { label: 'Kubernetes', url: '', target: '_top' },
+                { label: 'Node', url: 'http://www.flashforum.de/', target: '_top' },
+                { label: 'Pod', url: 'http://www.jqueryscript.net/', target: '_top' },
+                { label: 'Container', url: 'http://forum.jswelt.de/', target: '_top' },
+                { label: 'Deployment', url: 'https://jsfiddle.net/user/NiklasKnaack/fiddles/', target: '_top' },
+                { label: 'ReplicaSet', url: 'http://codepen.io/', target: '_top' },
+                { label: 'Service', url: 'http://threejs.org/', target: '_top' },
+                { label: 'Ingress', url: 'http://webglstudio.org/', target: '_top' },
+                { label: 'Namespace', url: 'http://jscompress.com/', target: '_top' }
+            ];
+
+            var settings = {
+
+                entries: entries,
+                width: 1080,
+                height: 1920,
+                radius: '65%',
+                radiusMin: 75,
+                bgDraw: true,
+                bgColor: '#008000',
+                opacityOver: 1.00,
+                opacityOut: 0.02,
+                opacitySpeed: 6,
+                fov: 800,
+                speed: .5,
+                fontFamily: 'Oswald, Arial, sans-serif',
+                fontSize: '20',
+                fontColor: '#fff',
+                fontWeight: 'bold',//bold
+                fontStyle: 'normal',//italic 
+                fontStretch: 'normal',//wider, narrower, ultra-condensed, extra-condensed, condensed, semi-condensed, semi-expanded, expanded, extra-expanded, ultra-expanded
+                fontToUpperCase: true,
+                tooltipFontFamily: 'Oswald, Arial, sans-serif',
+                tooltipFontSize: '11',
+                tooltipFontColor: '#fff',
+                tooltipFontWeight: 'normal',//bold
+                tooltipFontStyle: 'normal',//italic 
+                tooltipFontStretch: 'normal',//wider, narrower, ultra-condensed, extra-condensed, condensed, semi-condensed, semi-expanded, expanded, extra-expanded, ultra-expanded
+                tooltipFontToUpperCase: false,
+                tooltipTextAnchor: 'left',
+                tooltipDiffX: 0,
+                tooltipDiffY: 10
+
+            };
+
+            //var svg3DTagCloud = new SVG3DTagCloud( document.getElementById( 'holder'  ), settings );
+            $( '#holder' ).svg3DTagCloud( settings );
+
+		} );
+        
+    </script>
+
+</head>
+
+<body>
+
+    <div id='holder'></div>
+
+</body>

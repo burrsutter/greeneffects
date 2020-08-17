@@ -1,0 +1,128 @@
+<!doctype html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Gauges 1</title>
+    <link rel="shortcut icon" href=""/>
+    <style>
+        body {
+         background: #008000;
+        }
+        .GaugeMeter {
+            position: Relative;
+            text-align: Center;
+            overflow: Hidden;
+            cursor: Default;
+            display: inline-block;            
+        }
+
+        .GaugeMeter SPAN, .GaugeMeter B {
+            width: 54%;
+            position: Absolute;
+            text-align: Center;
+            display: Inline-Block;
+            
+            color: #fff;
+            font-weight: 100;
+            font-family: "Open Sans", Arial;
+            overflow: Hidden;
+            white-space: NoWrap;
+            text-overflow: Ellipsis;
+            margin: 0 23%;
+        }
+
+        .GaugeMeter[data-style="Semi"] B {
+            width: 80%;
+            margin: 0 10%;
+        }
+
+        .GaugeMeter S, .GaugeMeter U {
+            text-decoration: None;
+            font-size: .60em;
+            font-weight: 200;
+            opacity: .6;
+        }
+
+        .GaugeMeter B {
+            color: #000;            
+            font-weight: 200;
+            opacity: .8;
+        }
+    </style>
+   </head>
+<body>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="./gauge1/GaugeMeter.js"></script> 
+
+    <div class="GaugeMeter" 
+     id="Gauge1"
+     data-theme="White"
+     data-percent="20" 
+     data-label="Percent" 
+     data-width=8
+     data-label_color="#FFF"
+     data-animate_gauge_colors=true
+     data-animate_text_colors=true
+     data-stripe="3"
+     data-size="300"
+     data-style="Arch"
+     >
+    </div>
+
+    <div class="GaugeMeter" 
+    id="Gauge2"
+    data-theme="White"
+    data-percent="20" 
+    data-label="Percent" 
+    data-width=8
+    data-label_color="#FFF"
+    data-animate_gauge_colors=true
+    data-animate_text_colors=true
+
+    data-size="300"
+    data-style="Semi"
+    >
+   </div>
+
+   <div class="GaugeMeter" 
+    id="Gauge3"
+    data-theme="White"
+    data-percent="83" 
+    data-label="Percent" 
+    data-width=8
+    data-label_color="#FFF"
+    data-animate_gauge_colors=true
+    data-animate_text_colors=true
+        
+    data-size="300"
+    
+    >
+    <div class="GaugeMeter" 
+    id="Gauge4"
+    data-theme="White"
+    data-used="24" 
+    data-total="56"
+    data-text="24 of 56"
+    data-label="Pods" 
+    data-width=4
+    data-label_color="#FFF"
+    data-animate_gauge_colors=true
+    data-animate_text_colors=true
+        
+    data-size="300"
+    
+    >
+
+   </div>
+
+    <script>
+        $(document).ready(function () {
+            // Initialize GaugeMeter plugin
+            $(".GaugeMeter").gaugeMeter({percent:15});
+        });            
+        // $("#GaugeMeter").gaugeMeter({percent:15});
+    </script>
+
+<!-- color: RGBa(0,0,0,.8); -->
+</body>
+</html>

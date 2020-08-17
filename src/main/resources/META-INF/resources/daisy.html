@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Daisy</title>
+    <link rel="shortcut icon" href=""/>
+    <link rel="stylesheet" href="daisystyle.css"/>    
+    <style>
+        body {
+         background: #008000;
+        }
+    </style>
+  </head>
+<body> 
+    <div id="momoland">
+    </div>
+    <script src="daisy.js" defer></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            daisyjs(document.getElementById('momoland'), {
+            // particleRadius: 7,// dot size
+            density: 10000,
+            curvedLines:false,
+            dotColor: '#fff',
+            lineColor: '#ddd'
+            });
+        }, false);
+    </script>
+</body>
+</html>    

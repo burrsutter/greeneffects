@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>TagCanvas example</title>
+    <style>
+    body {
+        margin: 0;
+        background-color: #008000;
+        color: white;
+    }
+    </style>
+    <link rel="shortcut icon" href="">
+
+    <script src="tagcanvas.js" type="text/javascript"></script>
+    <script type="text/javascript">
+      window.onload = function() {
+        try {
+          TagCanvas.Start('myCanvas','tags',{            
+            shape: 'hring', //hycylinder
+            textColour: '#F0F8FF',
+            outlineColour: '#F0F8FF',
+            depth: 0.92,
+            weight: true,
+            weightFrom: 'data-weight',
+            reverse: true,         
+            depth: 0.8,
+            maxSpeed: 0.08            
+          });
+        } catch(e) {
+          // something went wrong, hide the canvas container
+          document.getElementById('myCanvasContainer').style.display = 'none';
+        }
+      };
+    </script>
+  </head>
+  <body>    
+    <div id="myCanvasContainer">
+      <canvas width="640" height="1080" id="myCanvas">
+        <p>Anything in here will be replaced on browsers that support the canvas element</p>
+      </canvas>
+    </div>
+    <div id="tags">
+      <ul>
+        <li><a data-weight="80" href="https://kubernetes.io/">Kubernetes</a></li>
+        <li><a data-weight="40" href="https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.18/#deployment-v1-apps">Deployment</a></li>
+        <li><a href="https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.18/#replicaset-v1-apps">ReplicaSet</a></li>
+        <li><a data-weight="60" href="https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.18/#pod-v1-core">Pod</a></li>        
+        <li><a data-weight="60" href="https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.18/#service-v1-core">Service</a></li>
+        <li><a data-weight="20" href="https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.18/#statefulset-v1-apps">StatefulSet</a></li>
+        <li><a data-weight="20" href="https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.18/#daemonset-v1-apps">DaemonSet</a></li>
+        <li><a data-weight="30" href="https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.18/#ingress-v1beta1-networking-k8s-io">Ingress</a></li>
+      </ul>
+    </div>
+  </body>
+</html>
